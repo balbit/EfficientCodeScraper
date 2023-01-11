@@ -8,16 +8,19 @@ l = json.load(f)
 
 imp = ['id','url','full_name','stargazers_count','language','size']
 
-if len(sys.argv) > 1:
+
+
+if len(sys.argv) > 1 and len(sys.argv[1]) <= 1:
 	print('\t'.join(imp + ['license']))
 	sys.exit()
+
+tok = sys.argv[1] if len(sys.argv)>1 else ''
 
 
 for e in l:
 #	print(e['url'])
 	try:
-		info = requests.get(e['url'], headers={'Authorization':'Bearer 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'}).json()
-		# print (info)
+		info = requests.get(e['url'], headers={'Authorization':'Bearer '+tok}).json()
 		li = 'null'
 		try:
 			li = info['license']['key']

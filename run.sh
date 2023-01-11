@@ -6,7 +6,7 @@ d1=$(du -s /media/bo/0123-4567/MTK/got | cut -f1)
 for i in $(seq 1); do
 echo "Getting List";
 s1=$(date +%s);
-./getlist.sh;
+./getlist.sh $1;
 s2=$(date +%s)
 echo "Downloading Content";
 python3 getcontents.py;
