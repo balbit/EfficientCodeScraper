@@ -21,6 +21,7 @@ for e in l:
 #	print(e['url'])
 	try:
 		info = requests.get(e['url'], headers={'Authorization':'Bearer '+tok}).json()
+#		print(info)
 		li = 'null'
 		try:
 			li = info['license']['key']

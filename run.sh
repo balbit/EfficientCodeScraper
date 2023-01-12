@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if (($# < 1)); then
+	echo "Input your token after the command"
+	exit 0
+fi
+
 echo "0" > down
 d1=$(du -s /media/bo/0123-4567/MTK/got | cut -f1)
 
