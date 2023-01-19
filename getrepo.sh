@@ -17,6 +17,7 @@ find tmp_dir -type f | egrep $reg > todo.txt
 
 filename=$(echo "$1" | tr / \#) # The pound sign is not used for github repos
 echo $filename
+mkdir tgot 2> /dev/null
 touch tgot/$filename
 
 ##################
