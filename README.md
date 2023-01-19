@@ -6,9 +6,16 @@ Information including star count and license are stored in ```repolinks.txt```
 
 ## Download Instructions
 
+Install python packages:
+
 ```
 pip install requests
-sudo apt-get install gh
+```
+
+And the gh CLI client:
+
+```
+sudo snap install gh
 ```
 
 ## Instructions for Usage
