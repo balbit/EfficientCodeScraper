@@ -6,7 +6,7 @@ Information including star count and license are stored in ```repolinks.txt```
 
 ## Instructions for Usage
 
-+ Edit the simlink ```got/``` to a desired folder for output
++ Edit the simlink ```got/``` to a desired folder for output, or simply create a directory called ```got/```
 + **Edit lastid.txt to select which id to start scraping from**
   + This is especially important for parallel downloading, as the script scrapes in sequential order starting from the given ID
 + Run ./run.sh {{token}} to download one batch of data (100 repos), where {{token}} is your fine-grained access token.
