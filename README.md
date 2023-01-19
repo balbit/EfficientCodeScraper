@@ -4,6 +4,13 @@ Scripts to scrape source code from Github in sequential order through obtaining 
 
 Information including star count and license are stored in ```repolinks.txt```
 
+## Download Instructions
+
+```
+pip install requests
+sudo apt-get install gh
+```
+
 ## Instructions for Usage
 
 + Edit the simlink ```got/``` to a desired folder for output, or simply create a directory called ```got/```
