@@ -11,11 +11,14 @@ y = []
 s = []
 c = []
 for e in l:
-	a,b=map(int, e.split()) # data downloaded, data used
-	x.append(math.log10(a))
-	y.append(b/a)
-	s.append(15 + math.log10(a)*0.5)
-	c.append(-(0.2-b/a) * (a + 3000)) 
+	try:
+		a,b=map(int, e.split()) # data downloaded, data used
+		x.append(math.log10(a))
+		y.append(b/a)
+		s.append(15 + math.log10(a)*0.5)
+		c.append(-(0.2-b/a) * (a + 3000)) 
+	except:
+		pass
 # mapping "badness": 
 # We set the standard for a decent scrape to 0.2 content ratio, 
 # and then weigh it by how much time it consumes, which we approximate
