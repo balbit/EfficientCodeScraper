@@ -20,6 +20,7 @@ sudo snap install gh
 
 ## Instructions for Usage
 
++ Log in to gh using ```gh auth```
 + Edit the simlink ```got/``` to a desired folder for output, or simply create a directory called ```got/```
 + **Edit lastid.txt to select which id to start scraping from**
   + This is especially important for parallel downloading, as the script scrapes in sequential order starting from the given ID
