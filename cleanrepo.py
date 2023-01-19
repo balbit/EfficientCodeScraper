@@ -1,3 +1,8 @@
+# cleanrepo.py obtains more information about each of the 100 directories listed 
+# and outputs the information into repolinks.txt
+# The set of important information to be scraped can be edited by modifying the list 
+# imp. 
+
 import json
 import requests
 import sys
@@ -8,8 +13,6 @@ l = json.load(f)
 
 imp = ['id','url','full_name','stargazers_count','language','size']
 
-
-
 if len(sys.argv) > 1 and len(sys.argv[1]) <= 1:
 	print('\t'.join(imp + ['license']))
 	sys.exit()
@@ -18,10 +21,8 @@ tok = sys.argv[1] if len(sys.argv)>1 else ''
 
 
 for e in l:
-#	print(e['url'])
 	try:
 		info = requests.get(e['url'], headers={'Authorization':'Bearer '+tok}).json()
-#		print(info)
 		li = 'null'
 		try:
 			li = info['license']['key']
