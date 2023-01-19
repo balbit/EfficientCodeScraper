@@ -16,10 +16,14 @@ echo $(($(cat down) + $mysize)) > down
 find tmp_dir -type f | egrep $reg > todo.txt
 
 filename=$(echo "$1" | tr / \#) # The pound sign is not used for github repos
-
 echo $filename
-
 touch tgot/$filename
+
+##################
+# Currently, the program concatenates all programming langauge content in the repository into a document, 
+# and adds that document to the folder got/ under the name AUTHOR#REPO
+# This behavior can be changed by modifying the following lines
+##################
 
 while read -r i; do cat $i >> tgot/$filename; done < todo.txt
 
