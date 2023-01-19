@@ -18,7 +18,7 @@ Then the executed command should look something like
 
 ## Adding Filtering
 
-Currently the program does no filtering (it simply clones all found repositories and downloads all its programming files) but it can be added through editing ```getcontents.py```, which can decide which files to download based on stars/language/size/license/etc. 
+Currently the program does no filtering (it simply clones all found repositories and downloads all their programming files) but it can be added through editing ```getcontents.py```, which can decide which files to download based on stars/language/size/license/etc. 
 
 Edit ```ext``` to change the list of allowed extensions
 
